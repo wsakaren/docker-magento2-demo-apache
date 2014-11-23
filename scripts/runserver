@@ -12,7 +12,7 @@ until mysql $MYSQLAUTH -e ""; do
     sleep 1
 done
 
-mysql $MYSQLAUTH -e "CREATE DATABASE IF NOT EXISTS magento2"
+mysql $MYSQLAUTH -e "CREATE DATABASE IF NOT EXISTS wsamagento2"
 
 # Create the Magento local.xml file
 if [ ! -f /var/www/magento2/htdocs/app/etc/local.xml ]; then
@@ -21,7 +21,7 @@ if [ ! -f /var/www/magento2/htdocs/app/etc/local.xml ]; then
 	php -f index.php install \
 		--cleanup_database \
 		--db_host=mysql \
-		--db_name=magento2 \
+		--db_name=wsamagento2 \
 		--db_user="$MYSQL_USER" \
 		--db_pass="$MYSQL_PASSWORD" \
 		--backend_frontname=admin \

@@ -1,5 +1,5 @@
 {
-  "name": "alankent/store",
+  "name": "wsakaren/store",
   "require": {
     "magento/magento-composer-installer": "*",
     "magento/product-community-edition": "0.1.0-alpha104"
